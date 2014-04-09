@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 9, 2014 6:49:28 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="cz.kamosh.hhh5645.entity.TableA" table="TABLE_A" schema="PUBLIC" catalog="PUBLIC">
+        <id name="tableAId" type="long">
+            <column name="TABLE_A_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="tableACharacter" type="string">
+            <column name="TABLE_A_CHARACTER" length="10" />
+        </property>
+        <set name="tableBs" table="TABLE_B" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="TABLE_A_ID" />
+            </key>
+            <one-to-many class="cz.kamosh.hhh5645.entity.TableB" />
+        </set>
+    </class>
+</hibernate-mapping>
