@@ -3,12 +3,12 @@
 <hibernate-configuration>
   <session-factory>
     <property name="hibernate.connection.driver_class">org.hsqldb.jdbcDriver</property>
-    <property name="hibernate.connection.url">jdbc:hsqldb:hsql://localhost/mytestdata</property>
+    <property name="hibernate.connection.url">jdbc:hsqldb:hsql://localhost/mainDb</property>
     <property name="hibernate.connection.username">sa</property>
     <property name="hibernate.dialect">org.hibernate.dialect.HSQLDialect</property>
-    <property name="hibernate.show_sql">true</property>
-    <mapping resource="cz/kamosh/hhh5645/entity/TableB.hbm.xml"/>
-    <mapping resource="cz/kamosh/hhh5645/entity/TableC.hbm.xml"/>
-    <mapping resource="cz/kamosh/hhh5645/entity/TableA.hbm.xml"/>
+    <!--<property name="hibernate.show_sql">true</property>-->
+    <mapping resource="TableB.hbm.xml"/>
+    <mapping resource="TableC.hbm.xml"/>
+    <mapping resource="TableA.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>
