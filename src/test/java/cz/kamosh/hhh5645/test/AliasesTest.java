@@ -16,7 +16,6 @@ import org.junit.Test;
 import cz.kamosh.hhh5645.entity.TableA;
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.util.logging.LogManager;
 import org.hibernate.sql.JoinType;
 import org.hsqldb.Server;
 import org.junit.AfterClass;
@@ -27,9 +26,7 @@ public class AliasesTest {
     private static Server hsqlServer;
 
     @BeforeClass
-    public static void runDB() throws Exception {     
-        final LogManager logManager = LogManager.getLogManager();
-//        logManager.readConfiguration();
+    public static void runDB() throws Exception {
 
         hsqlServer = new Server();
 
